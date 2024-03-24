@@ -24,13 +24,15 @@ def divide(a, b: int|float) -> float:
     return a / b
 
 
-
 def split_by_operators(s:str) -> list[str]:
     return re.split(r'(\*|\-|\/|\+)', s)
 
 def make_operation(eq_todo):
     operator = eq_todo[1]
     if operator == "+": return add(eq_todo[0], eq_todo[2])
+    elif operator == "-": return subtract(eq_todo[0], eq_todo[2])
+    elif operator == "\\": return divide(eq_todo[0], eq_todo[2])
+    else: return multiply(eq_todo[0], eq_todo[2])
 
 def main():
     eq = sys.argv[1]
@@ -39,8 +41,6 @@ def main():
 
     result = make_operation(eq_todo)
     print(f"{eq} = {result}")
-
-
 
 
 if __name__ == "__main__":
