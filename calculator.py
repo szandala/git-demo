@@ -10,24 +10,20 @@ def add(*numbers: int|float) -> int|float:
 
     return sum_val
 
-def subtract(a, b: int|float) -> int|float:
+def subtract(a: int|float, b: int|float) -> int|float:
     return a - b
 
-def multiply(*numbers: int|float) -> int|float:
-    mul_val = 0
-    for n in numbers:
-        mul_val *= n
+def multiply(a: int|float, b: int|float) -> int|float:
+    return a * b
 
-    return mul_val
-
-def divide(a, b: int|float) -> float:
+def divide(a: int|float, b: int|float) -> float:
     return a / b
 
 
 def split_by_operators(s:str) -> list[str]:
     return re.split(r'(\*|\-|\/|\+)', s)
 
-def make_operation(eq_todo):
+def make_operation(eq_todo: list) -> float:
     operator = eq_todo[1]
     if operator == "+": return add(eq_todo[0], eq_todo[2])
     elif operator == "-": return subtract(eq_todo[0], eq_todo[2])
