@@ -10,7 +10,7 @@ def add(*numbers: int|float) -> int|float:
 
     return sum_val
 
-def subtract(a, b: int|float) -> int|float:
+def subtract(a: int|float, b: int|float) -> int|float:
     return a - b
 
 def multiply(*numbers: int|float) -> int|float:
@@ -20,7 +20,7 @@ def multiply(*numbers: int|float) -> int|float:
 
     return mul_val
 
-def divide(a, b: int|float) -> float:
+def divide(a: int|float, b: int|float) -> float:
     return a / b
 
 
