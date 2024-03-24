@@ -1,7 +1,6 @@
 import sys
 import re
 
-# NIE uczcie się na tym Pythona!
 
 Value = int|float
 
