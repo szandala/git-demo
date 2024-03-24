@@ -3,27 +3,29 @@ import re
 
 # NIE uczcie się na tym Pythona!
 
-def add(*numbers: int|float) -> int|float:
+Value = int|float
+
+def add(*numbers: Value) -> Value:
     sum_val = 0
     for n in numbers:
         sum_val += n
 
     return sum_val
 
-def subtract(a: int|float, b: int|float) -> int|float:
+def subtract(a: Value, b: Value) -> Value:
     return a - b
 
-def multiply(a: int|float, b: int|float) -> int|float:
+def multiply(a: Value, b: Value) -> Value:
     return a * b
 
-def divide(a: int|float, b: int|float) -> float:
+def divide(a: Value, b: Value) -> float:
     return a / b
 
 
 def split_by_operators(s:str) -> list[str]:
     return re.split(r'(\*|\-|\/|\+)', s)
 
-def make_operation(eq_todo: list) -> float:
+def make_operation(eq_todo: list[str|int|float]) -> float:
     operator = eq_todo[1]
     if operator == "+": return add(eq_todo[0], eq_todo[2])
     elif operator == "-": return subtract(eq_todo[0], eq_todo[2])
