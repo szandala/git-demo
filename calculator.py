@@ -12,6 +12,7 @@ def add(*numbers: int|float) -> int|float:
 
 def subtract(a: int|float, b: int|float) -> int|float:
     return a - b
+    # comment
 
 def multiply(*numbers: int|float) -> int|float:
     mul_val = 1
