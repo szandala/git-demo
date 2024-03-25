@@ -6,7 +6,7 @@ import re
 def add(*numbers: int|float) -> int|float:
     sum_val = 0
     for n in numbers:
-        sum_val += n
+        sum_val += int(n)
 
     return sum_val
 
@@ -16,7 +16,7 @@ def subtract(a: int|float, b: int|float) -> int|float:
 def multiply(*numbers: int|float) -> int|float:
     mul_val = 1
     for n in numbers:
-        mul_val *= n
+        mul_val *= int(n)
 
     return mul_val
 
