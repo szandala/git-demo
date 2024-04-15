@@ -18,5 +18,8 @@ jobs:
       run: |
         pip install mypy pylint
 
+    - name: Run mypy
+      run: mypy calculator.py
+
     - name: Run pylint
       run: pylint calculator.py
