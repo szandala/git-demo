@@ -4,7 +4,7 @@ import re
 # NIE uczcie się na tym Pythona!
 
 def add(*numbers: int|float) -> int|float:
-    sum_val = 0
+    sum_val = 0.0
     for n in numbers:
         sum_val += n
 
@@ -14,7 +14,7 @@ def subtract(a: int|float, b: int|float) -> int|float:
     return a - b
 
 def multiply(*numbers: int|float) -> int|float:
-    mul_val = 1
+    mul_val = 1.0
     for n in numbers:
         mul_val *= n
 
